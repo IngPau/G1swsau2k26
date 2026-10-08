@@ -1,0 +1,78 @@
+﻿namespace Capa_Vista_Recursos
+{
+    partial class Frm_Recursos
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.navegador1 = new Capa_Vista_Navegador.Navegador();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // navegador1
+            // 
+            this.navegador1.IPkId_Aplicacion = 0;
+            this.navegador1.IPkId_Modulo = 0;
+            this.navegador1.Location = new System.Drawing.Point(12, 50);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.SAlias = null;
+            this.navegador1.SEtiquetas = null;
+            this.navegador1.Size = new System.Drawing.Size(1167, 330);
+            this.navegador1.SNombreTabla = null;
+            this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(45, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(380, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "MANTENIMIENTO RECURSOS";
+            // 
+            // Frm_Recursos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(1321, 542);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.navegador1);
+            this.Name = "Frm_Recursos";
+            this.Text = "Frm_Recursos";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private Capa_Vista_Navegador.Navegador navegador1;
+        private System.Windows.Forms.Label label1;
+    }
+}
