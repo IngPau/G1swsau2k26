@@ -1,37 +1,28 @@
 ﻿using System;
+using System.Data;
 using System.Data.Odbc;
 
+//Inicio de código de Paula Daniela Leonardo Paredes carné 0901-22-9580 en la fecha de: "20/10/2026"
 namespace Capa_Modelo_PY
 {
-    // Clase que administra la conexión ODBC a la base de datos
-    internal class Cls_Conexion_PY
+    public class Cls_Conexion_PY
     {
-        // Método de creación de la conexión vía ODBC
+        private readonly string gConexionOdbc = "Dsn=bd_auditoria"; // DSN de ODBC
+
+        // Devuelve una conexión cerrada; el DAO la abre y la cierra con "using"
         public OdbcConnection conexion()
         {
-            OdbcConnection conn = new OdbcConnection("Dsn=bd_auditoria");
-            try
-            {
-                conn.Open();
-            }
-            catch (OdbcException ex)
-            {
-                throw new Exception("No se pudo conectar a la base de datos (DSN bd_auditoria): " + ex.Message);
-            }
-            return conn;
+            return new OdbcConnection(gConexionOdbc);
         }
 
-        // Método para cerrar la conexión
+        // Cierra la conexión si está abierta
         public void desconexion(OdbcConnection conn)
         {
-            try
+            if (conn != null && conn.State == ConnectionState.Open)
             {
-                if (conn != null && conn.State == System.Data.ConnectionState.Open) conn.Close();
-            }
-            catch (OdbcException)
-            {
-                Console.WriteLine("No se pudo cerrar la conexión");
+                conn.Close();
             }
         }
     }
 }
+//Fin de código de Paula Daniela Leonardo Paredes carné 0901-22-9580 en la fecha de: "20/10/2026"
